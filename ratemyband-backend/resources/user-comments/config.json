@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"username": {
+			"name": "username",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "username",
+			"order": 0
+		},
+		"comment": {
+			"name": "comment",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "comment",
+			"order": 1
+		},
+		"vote": {
+			"name": "vote",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "vote",
+			"order": 2
+		}
+	}
+}

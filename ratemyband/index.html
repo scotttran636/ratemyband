@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>coffeerun</title>
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="twitter.css">
+
+</head>
+
+<body class="container">
+  <header>
+    <h3>Rate My Band</h3>
+  </header>
+  <section>
+    <div class="panel panel-footer">
+      <label>Example band</label>
+      <p>Performance on January 2, 1965</p>
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/dhCeseXZEKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+    </div>
+    <div class="panel panel-title">
+      <div class="panel-body">
+        <form data-coffee-order="form">
+          <div class="form-group">
+
+            <!--upvote and downvote radio buttons-->
+            <div class="vote-selector form-group">
+              <input id="downvote" type="radio" name="vote" value="downvote" />
+              <label class="drinkcard-cc downvote"for="downvote"></label>
+                <input id="upvote" type="radio" name="vote" value="upvote" />
+                <label class="drinkcard-cc upvote" for="upvote"></label>
+            </div>
+
+
+            <label for="userComment"> </label>
+            <input class="form-control" name="comment" placeholder="Add a comment" id="userComment" autofocus/>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="username" name="username" id="userName" value="" required>
+          </div>
+          <!--<div class="radio">
+            <label>
+                <input type="radio" name="recommendation" value="Would Recommend">
+                Would Recommend
+              </label>
+          </div>
+          <div class="radio">
+            <label>
+                <input type="radio" class="btn btn-default" name="recommendation" value="Would Not Recommend">
+                Would Not Recommend
+              </label>
+          </div>
+          <div class="radio">
+            <label>
+                <input type="radio" name="recommendation" value="Undecided" checked>
+                Undecided
+              </label>
+          </div>-->
+
+
+
+          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+      </div>
+    </div>
+    <div class="panel panel-footer">
+      <div class="panel-body">
+        <h4>Comments:</h4>
+        <div data-coffee-order="checklist"></div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/validation.js" charset="utf-8"></script>
+  <script src="scripts/checklist.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
