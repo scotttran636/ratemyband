@@ -1,4 +1,5 @@
 (function(window) {
+  console.log("USING validation.js");
   "use strict";
   var App = window.App || {};
   var Validation = {

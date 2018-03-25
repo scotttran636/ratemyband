@@ -1,9 +1,12 @@
 (function(window) {
   "use strict";
+  console.log("USING formhandler.js");
   var App = window.App || {};
   var $ = window.jQuery;
 
   function FormHandler(selector) {
+    console.log("Constructing FormHandler from selector");
+    console.log("selector= " + selector);
     if (!selector) {
       throw new Error("No selector provided");
     }
@@ -14,16 +17,22 @@
   }
 
   FormHandler.prototype.addSubmitHandler = function(fn) {
-    console.log("Setting submit handler for form");
+    console.log("calling FormHandler.addSubmitHandler()");
     this.$formElement.on("submit", function(event) {
+      console.log("calling callback function inside FormHandler.addSubmitHandler()");
       event.preventDefault();
 
       var data = {};
+      console.log("this = " + this);
+      console.log("$(this) = " + $(this));
       $(this).serializeArray().forEach(function(item) {
+        console.log("item= " + item);
+        console.log("calling $(this).serializeArray().forEach(function(item))");
+        console.log("item is: " + item);
         data[item.name] = item.value;
         console.log(item.name + " is " + item.value);
       });
-      console.log(data);
+      console.log("This is data: "+ data);
       fn(data);
       this.reset();
       this.elements[0].focus();
@@ -31,8 +40,9 @@
   };
 
   FormHandler.prototype.addInputHandler = function(fn) {
-    console.log("Setting input handler for form");
+    console.log("calling FormHandler.addInputHandler()");
     this.$formElement.on("input", "[name=\"emailAddress\"]", function(event) {
+      console.log("calling callback function inside FormHandler.addInputHandler()");
       var emailAddress = event.target.value;
       var message = "";
       if (fn(emailAddress)) {
